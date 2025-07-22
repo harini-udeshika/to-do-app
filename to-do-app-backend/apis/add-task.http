@@ -1,0 +1,14 @@
+### GET request to example server
+POST http://localhost:4000/api/task
+Content-Type: application/json
+
+
+  {
+    "title": "Schedule dentist appointment",
+    "description": "Book a checkup for next week"
+  }
+
+
+
+
+###
