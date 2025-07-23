@@ -1,0 +1,17 @@
+:root {
+  /* === Color Palette === */
+  --color-primary: #a4b9b2;
+  --color-secondary: #eccf7f;
+  --color-secondary-dark: #eed799;
+
+  --color-accent-1: rgb(247, 255, 252);
+  --color-accent-2: #889e97;
+
+  --color-text: #506565;
+  --color-background: #ffffff;
+
+  /* === Shadows === */
+  --shadow-soft: 0 2px 6px rgba(164, 185, 178, 0.15);
+  --shadow-medium: 0 4px 12px rgba(164, 185, 178, 0.25);
+  --shadow-deep: 0 8px 24px rgba(164, 185, 178, 0.35);
+}

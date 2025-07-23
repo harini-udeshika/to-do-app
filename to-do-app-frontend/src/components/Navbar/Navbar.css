@@ -1,0 +1,63 @@
+
+@import url(../../styles.css);
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-background);
+  padding: 0px 40px;
+  box-shadow: var(--shadow-soft);
+
+}
+
+.navbar h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color:var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Optional: Logo if added next to title */
+.navbar h1::before {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-color:var(--color-background);
+  padding: 6px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar .links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+.navbar .links a:first-child {
+  background-color:var(--color-primary);
+  color: white;
+}
+
+.navbar .links a:first-child::before {
+  display: inline-block;
+}
+
+.navbar .links a:last-child::before {
+  display: inline-block;
+}
