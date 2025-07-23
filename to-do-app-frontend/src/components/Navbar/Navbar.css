@@ -1,0 +1,53 @@
+
+@import url(../../styles.css);
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-background);
+  padding-right: 3rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.navbar h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color:var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 4rem;
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar .links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+.navbar .links a:first-child {
+  background-color:var(--color-primary);
+  color: white;
+}
+
+.navbar .links a:first-child::before {
+  display: inline-block;
+}
+
+.navbar .links a:last-child::before {
+  display: inline-block;
+}
