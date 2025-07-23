@@ -1,13 +1,13 @@
 
 @import url(../../styles.css);
 .navbar {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-background);
-  padding: 0px 40px;
+  padding-right: 3rem;
   box-shadow: var(--shadow-soft);
-
 }
 
 .navbar h1 {
@@ -17,17 +17,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-/* Optional: Logo if added next to title */
-.navbar h1::before {
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  background-color:var(--color-background);
-  padding: 6px;
-  border-radius: 6px;
-  margin-right: 10px;
+  margin-left: 4rem;
 }
 
 .navbar .links {

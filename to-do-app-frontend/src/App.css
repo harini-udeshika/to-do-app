@@ -6,7 +6,6 @@
     align-items: center;
     justify-content: flex-start;
     height: 100vh;
-    background-color: #f0f0f0;
 }
 .app-body{
     width: 100%;
@@ -14,6 +13,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
+   height: 70%;
 }
 
 .app-header {
@@ -22,14 +22,14 @@
 
 .title {
   font-size: 2.5rem;
-  color: var(--sage-green);
+  color: var(--color-text);
   font-weight: 700;
   margin-bottom: 0.3rem;
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: var(--sage-dark);
+  color: var(--color-accent-2);
   font-weight: 400;
   letter-spacing: 0.3px;
 }

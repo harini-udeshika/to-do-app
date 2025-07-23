@@ -1,7 +1,7 @@
 @import url(../../styles.css);
 
 .to-do-list-container {
-  width: 40%;
+  width: 45%;
   margin:1rem;
   padding: 1rem;
   background-color: #fffdfd;
@@ -59,6 +59,7 @@
   background-color: #fefbfd;
   box-shadow: 0 4px 18px rgba(229, 141, 181, 0.1);
   transition: box-shadow 0.2s;
+  margin: 0.5rem;
 }
 
 .to-do-card:hover {
@@ -68,13 +69,28 @@
 .card-left .title {
   font-weight: 600;
   font-size: 16px;
-  color: #3d2e32;
+  color:var(--color-text);
 }
-
+.card-left .title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content:left;
+  align-items: flex-start;
+}
+.card-left .title-container small {
+  font-size: 12px;
+  color: var(--color-background);
+  margin-left: 8px;
+  background-color: var(--color-accent-2);
+  padding: 1px 6px;
+  border-radius: 8px;
+  margin-top: 3px;
+}
 .card-left .desc {
   font-size: 14px;
   color: var(--color-accent-2);
   margin-top: 4px;
+  text-overflow: ellipsis;
 }
 
 .card-left .created {
@@ -85,13 +101,16 @@
 
 .card-right {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
 }
 
 .card-right button {
   background: none;
   border: none;
+  padding: 0.5rem;
+  background-color:var(--color-primary);
+  border-radius: 0.8rem;
   font-size: 18px;
   color: var(--color-secondary-dark);
   cursor: pointer;
