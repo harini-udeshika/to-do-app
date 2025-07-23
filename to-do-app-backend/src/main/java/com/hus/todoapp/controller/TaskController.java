@@ -51,4 +51,16 @@ public class TaskController {
         }
         return ResponseEntity.ok().body(taskService.getTasks());
     }
+
+    @PatchMapping("/task/complete")
+    public ResponseEntity<?> completeTask(@RequestParam("id") Long id) {
+        if (taskService.completeTask(id)) {
+            return ResponseEntity.ok().body(Map.of(
+                    "message", "Task completed successfully"
+            ));
+        }
+        return ResponseEntity.badRequest().body(Map.of(
+                "message", "Task completion failed"
+        ));
+    }
 }
