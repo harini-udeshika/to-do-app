@@ -43,13 +43,20 @@ public class TaskService {
     }
 
     public List<TaskResponseDto> getLatestTasks() {
-        List<Task> tasks = taskRepository.findTop5ByOrderByCreatedAtDesc();
+        List<Task> tasks = taskRepository.findTop5ByIsCompletedFalseOrderByCreatedAtDesc();
         List<TaskResponseDto> latestTasks = new ArrayList<>();
         for (Task task : tasks) {
             TaskResponseDto taskResponseDto = TaskMapper.taskResponseDto(task);
             latestTasks.add(taskResponseDto);
         }
         return latestTasks;
+    }
+
+    public boolean completeTask(Long id){
+        Task task = taskRepository.findById(id).orElseThrow(() -> new TaskNotFoundException("Task not found with the id "+id));
+        task.setCompleted(true);
+        taskRepository.save(task);
+        return true;
     }
 
 

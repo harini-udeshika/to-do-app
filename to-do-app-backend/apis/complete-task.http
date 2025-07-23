@@ -1,0 +1,4 @@
+### GET request to example server
+PATCH http://localhost:4000/api/task/complete?id=8
+
+###
