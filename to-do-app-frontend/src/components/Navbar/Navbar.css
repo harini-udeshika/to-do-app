@@ -1,53 +1,79 @@
 
 @import url(../../styles.css);
+
 .navbar {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color-background);
-  padding-right: 3rem;
+  background: linear-gradient(145deg, #ffffff 0%, var(--color-accent-1) 100%);
+  padding: 1rem 3rem;
   box-shadow: var(--shadow-soft);
+  border-bottom: 1px solid rgba(155, 142, 169, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .navbar h1 {
-  font-size: 24px;
-  font-weight: 600;
-  color:var(--color-primary);
+  font-size: 26px;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin-left: 4rem;
 }
 
 .navbar .links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 .navbar .links a {
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--color-text-light);
   font-size: 16px;
   font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  border-radius: 30px;
-  transition: 0.2s;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .navbar .links a:first-child {
-  background-color:var(--color-primary);
+  background: var(--gradient-primary);
   color: white;
+  box-shadow: var(--shadow-soft);
 }
 
-.navbar .links a:first-child::before {
-  display: inline-block;
+.navbar .links a:first-child:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
 }
 
-.navbar .links a:last-child::before {
+.navbar .links a:last-child {
+  background: var(--gradient-secondary);
+  color: var(--color-text);
+  box-shadow: var(--shadow-soft);
+}
+
+.navbar .links a:last-child:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-green);
+}
+
+.navbar .links a::before {
   display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.navbar .links a:hover::before {
+  transform: scale(1.1);
 }
