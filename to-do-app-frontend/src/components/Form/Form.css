@@ -1,80 +1,74 @@
 
 @import url(../../styles.css);
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--color-background);
-  margin: 0;
-  padding: 0;
-}
-
 .form-container {
-  background: linear-gradient(145deg, #ffffff 0%, var(--color-accent-1) 100%);
-  max-width: 40%;
-  margin: 1rem;
-  padding: 2rem 1.5rem;
-  border-radius: 20px;
+  background: var(--color-background);
+  width: 100%;
+  max-width: 400px;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
   box-shadow: var(--shadow-medium);
-  text-align: center;
-  border: 1px solid rgba(155, 142, 169, 0.1);
-  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-accent-3);
 }
 
 .title {
-  font-size: 1.6rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--color-text);
   margin-bottom: 1.5rem;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  text-align: center;
+  border-bottom: 2px solid var(--color-accent-3);
+  padding-bottom: 0.75rem;
 }
 
 form input[type="text"],
 form textarea {
   width: 100%;
-  padding: 14px 16px;
-  margin: 12px 0;
-  border: 2px solid var(--color-accent-2);
-  border-radius: 12px;
-  background-color: var(--color-accent-1);
-  font-size: 14px;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--color-accent-3);
+  border-radius: 0.5rem;
+  background-color: var(--color-background);
+  font-size: 0.875rem;
   color: var(--color-text);
-  font-family: 'Poppins', sans-serif;
+  font-family: inherit;
   box-sizing: border-box;
   outline: none;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 form input[type="text"]:focus,
 form textarea:focus {
   border-color: var(--color-primary);
-  box-shadow: var(--shadow-green);
-  background-color: #ffffff;
-  transform: translateY(-2px);
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+  background-color: var(--color-background);
+}
+
+form input[type="text"]::placeholder,
+form textarea::placeholder {
+  color: var(--color-text-light);
 }
 
 button[type="submit"] {
   width: 100%;
-  padding: 14px;
+  padding: 0.75rem 1rem;
   margin-top: 1rem;
-  background: var(--gradient-secondary);
-  color: var(--color-text);
-  font-size: 16px;
-  font-weight: 600;
+  background: var(--gradient-primary);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
   border: none;
-  border-radius: 12px;
+  border-radius: 0.5rem;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-soft);
+  font-family: inherit;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-green);
 }
 
 button[type="submit"]:hover {
-  background: var(--gradient-secondary);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-green);
+  background: var(--color-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
 }
 
 button[type="submit"]:active {

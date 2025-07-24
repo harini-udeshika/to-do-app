@@ -17,12 +17,12 @@ describe('Navbar Component', () => {
         expect(homeLink).toHaveAttribute('href', '/')
     })
 
-      it('renders the home icon and text', () => {
-    render(<Navbar />)
-    
-    // Check for the combined text content including the icon
-    expect(screen.getByText(/FaHome.*Home/)).toBeInTheDocument()
-  })
+    it('renders the home icon and text', () => {
+        render(<Navbar />)
+
+        // Check for the combined text content including the icon
+        expect(screen.getByText(/FaHome.*Dashboard/)).toBeInTheDocument()
+    })
 
     it('has the correct navbar structure', () => {
         render(<Navbar />)

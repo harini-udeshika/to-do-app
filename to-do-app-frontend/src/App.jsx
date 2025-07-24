@@ -23,19 +23,13 @@ function App() {
 
   return (
     <>
-
       <div className="app-container">
         <Navbar />
-        <header className="app-header">
-          <h1 className="title">Todo App</h1>
-          <p className="subtitle">Organize your tasks · Stay productive!</p>
-        </header>
 
         <div className="app-body">
           <ToDoForm todos={todos} setTodos={setTodos} />
           <TodoDisplay todos={todos} setTodos={setTodos} />
         </div>
-
       </div>
     </>
   )
