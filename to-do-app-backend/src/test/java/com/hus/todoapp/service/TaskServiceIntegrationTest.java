@@ -60,8 +60,8 @@ public class TaskServiceIntegrationTest {
         assertThat(latestTasks).allMatch(task -> !task.getCompleted());
 
         for (int i = 0; i < latestTasks.size() - 1; i++) {
-            assertThat(LocalDateTime.parse(latestTasks.get(i).getCreatedAt()))
-                    .isAfterOrEqualTo(LocalDateTime.parse(latestTasks.get(i + 1).getCreatedAt()));
+            assertThat(java.time.ZonedDateTime.parse(latestTasks.get(i).getCreatedAt()).toLocalDateTime())
+                    .isAfterOrEqualTo(java.time.ZonedDateTime.parse(latestTasks.get(i + 1).getCreatedAt()).toLocalDateTime());
         }
     }
 
