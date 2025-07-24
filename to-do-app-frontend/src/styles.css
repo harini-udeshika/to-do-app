@@ -1,17 +1,25 @@
 :root {
-  /* === Color Palette === */
-  --color-primary: #a4b9b2;
-  --color-secondary: #eccf7f;
-  --color-secondary-dark: #eed799;
-
-  --color-accent-1: rgb(247, 255, 252);
-  --color-accent-2: #889e97;
-
-  --color-text: #506565;
-  --color-background: #ffffff;
-
-  /* === Shadows === */
-  --shadow-soft: 0 2px 6px rgba(164, 185, 178, 0.15);
-  --shadow-medium: 0 4px 12px rgba(164, 185, 178, 0.25);
-  --shadow-deep: 0 8px 24px rgba(164, 185, 178, 0.35);
+  /* === Elegant Pastel Purple & Green Color Palette === */
+  --color-primary: #9B8EA9;          /* Soft lavender purple */
+  --color-secondary: #A8D5BA;        /* Mint green */
+  --color-secondary-dark: #8BC4A3;   /* Deeper mint green */
+  
+  --color-accent-1: #F8F6FF;         /* Very light purple tint */
+  --color-accent-2: #B8A9C9;         /* Medium lavender */
+  --color-accent-3: #E8F4F8;         /* Very light mint */
+  
+  --color-text: #4A4A6A;             /* Deep purple-gray */
+  --color-text-light: #6B6B8A;       /* Medium purple-gray */
+  --color-background: #FAFAFF;       /* Very light purple-white */
+  
+  /* === Pastel Gradients === */
+  --gradient-primary: linear-gradient(135deg, #9B8EA9 0%, #B8A9C9 100%);
+  --gradient-secondary: linear-gradient(135deg, #A8D5BA 0%, #8BC4A3 100%);
+  --gradient-background: linear-gradient(135deg, #FAFAFF 0%, #F8F6FF 100%);
+  
+  /* === Enhanced Shadows with Purple Tint === */
+  --shadow-soft: 0 2px 8px rgba(155, 142, 169, 0.12);
+  --shadow-medium: 0 4px 16px rgba(155, 142, 169, 0.18);
+  --shadow-deep: 0 8px 32px rgba(155, 142, 169, 0.25);
+  --shadow-green: 0 4px 16px rgba(168, 213, 186, 0.2);
 }

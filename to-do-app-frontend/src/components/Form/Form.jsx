@@ -1,16 +1,16 @@
 import { addTodo, fetchTodos } from '../../apis/api';
 import './Form.css';
 import { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const ToDoForm = ({ todos, setTodos }) => {
+const ToDoForm = ({ setTodos }) => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (title.trim() === '' || description.trim() === '') {
-            toast.error("Title and Description cannot be empty!");
+            toast.error("Title and Description cannot be empty!", { autoClose: 2000 });
             return;
         }
 
@@ -21,11 +21,11 @@ const ToDoForm = ({ todos, setTodos }) => {
             setTodos(data);
             console.log('Fetched Todos after add:', data);
 
-            toast.success("Todo Added Successfully!");
+            toast.success("Todo Added Successfully!", { autoClose: 2000 });
             setTitle('');
             setDescription('');
         } catch (error) {
-            toast.error("Failed to add todo or fetch updated todos!");
+            toast.error("Failed to add todo or fetch updated todos!", { autoClose: 2000 });
             console.error('Error adding todo or fetching todos:', error);
         }
     };
@@ -34,19 +34,6 @@ const ToDoForm = ({ todos, setTodos }) => {
 
     return (
         <>
-            <ToastContainer
-                position="top-right"
-                autoClose={1000}
-                hideProgressBar={false}
-                newestOnTop={true}
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light"
-                closeOnClick={true}
-            />
-
             <div className="form-container">
                 <div className="title">Add New Todo</div>
                 <form onSubmit={handleSubmit}>

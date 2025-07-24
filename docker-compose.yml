@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   postgres:
     image: postgres:16
@@ -12,6 +10,35 @@ services:
       - "5005:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
+    networks:
+      - todo-network
+
+  backend:
+    build:
+      context: ./to-do-app-backend
+      dockerfile: Dockerfile
+    container_name: todo-backend
+    ports:
+      - "4000:4000"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/tododb
+      SPRING_DATASOURCE_USERNAME: todo_user
+      SPRING_DATASOURCE_PASSWORD: todo_password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    depends_on:
+      - postgres
+    networks:
+      - todo-network
+
+  frontend:
+    build:
+      context: ./to-do-app-frontend
+      dockerfile: Dockerfile
+    container_name: todo-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
     networks:
       - todo-network
 

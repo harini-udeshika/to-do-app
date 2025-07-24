@@ -26,9 +26,9 @@ function App() {
 
       <div className="app-container">
         <Navbar />
-        <header class="app-header">
-          <h1 class="title">Todo App</h1>
-          <p class="subtitle">Organize your tasks · Stay productive!</p>
+        <header className="app-header">
+          <h1 className="title">Todo App</h1>
+          <p className="subtitle">Organize your tasks · Stay productive!</p>
         </header>
 
         <div className="app-body">
