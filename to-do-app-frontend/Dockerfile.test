@@ -1,0 +1,18 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy source code
+COPY . .
+
+# Expose port for test UI (if needed)
+EXPOSE 5123
+
+# Default command to run tests
+CMD ["npm", "run", "test"] 
