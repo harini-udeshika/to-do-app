@@ -4,6 +4,18 @@ import { FaArrowRight, FaCheckCircle, FaCircle, FaDotCircle, FaGgCircle, FaInfoC
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// Helper function to format date properly
+const formatDate = (dateString) => {
+    try {
+        // Parse the date string and create a proper Date object
+        const date = new Date(dateString);
+        return date.toLocaleDateString();
+    } catch (error) {
+        console.error('Error formatting date:', error);
+        return 'Invalid Date';
+    }
+};
+
 const TodoDisplay = ({ todos, setTodos }) => {
     const handleDelete = async (id) => {
         try {
@@ -74,7 +86,7 @@ const TodoDisplay = ({ todos, setTodos }) => {
                             <div className="card-left">
                                 <div className='title-container'>
                                     <div className="title">{todo.title}</div>
-                                    <small> {new Date(todo.createdAt).toLocaleDateString()}</small>
+                                    <small> {formatDate(todo.createdAt)}</small>
                                 </div>
 
                                 <div className="desc">{todo.description}</div>

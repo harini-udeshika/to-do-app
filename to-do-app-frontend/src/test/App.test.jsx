@@ -18,8 +18,8 @@ describe('App Component', () => {
 
         render(<App />)
 
-        expect(screen.getByText('Todo App')).toBeInTheDocument()
-        expect(screen.getByText('Organize your tasks · Stay productive!')).toBeInTheDocument()
+        expect(screen.getByText('To-Do App')).toBeInTheDocument()
+        expect(screen.getByText('Organize your tasks')).toBeInTheDocument()
     })
 
     it('renders the navbar', () => {
@@ -28,7 +28,7 @@ describe('App Component', () => {
         render(<App />)
 
         expect(screen.getByText('To-Do App')).toBeInTheDocument()
-        expect(screen.getByText(/FaHome.*Home/)).toBeInTheDocument()
+        expect(screen.getByText(/FaHome.*Dashboard/)).toBeInTheDocument()
     })
 
     it('renders the form component', () => {
